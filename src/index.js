@@ -5,7 +5,7 @@ import './css/media.css'
 import Header from './components/header'
 import Main from './components/main'
 import Footer from './components/footer'
-
+import './js/script'
 
 const main = ReactDOMClient.createRoot(document.getElementById('main'))
 const header = ReactDOMClient.createRoot(document.getElementById('header'))
