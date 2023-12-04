@@ -38,5 +38,16 @@
   "devDependencies": {
     "eslint": "^8.55.0",
     "eslint-plugin-react": "^7.33.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:fix",
+      "git add"
+    ]
   }
 }

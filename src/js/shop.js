@@ -1,4 +1,4 @@
-const animatedElements = document.querySelectorAll('.more-btn');
+const animatedElements = document.querySelectorAll(".more-btn");
 
 function checkScroll() {
   animatedElements.forEach((element) => {
@@ -6,11 +6,11 @@ function checkScroll() {
     const elementBottom = element.getBoundingClientRect().bottom;
 
     if (elementTop < window.innerHeight && elementBottom > 0) {
-      element.classList.add('animate');
+      element.classList.add("animate");
     } else {
-      element.classList.remove('animate');
+      element.classList.remove("animate");
     }
   });
 }
 
-window.addEventListener('scroll', checkScroll);
+window.addEventListener("scroll", checkScroll);
