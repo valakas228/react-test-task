@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const MyForm = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    tel: '',
-    email: '',
+    firstName: "",
+    tel: "",
+    email: "",
   });
 
   const handleChange = (e) => {
@@ -18,15 +18,14 @@ const MyForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    localStorage.setItem('formData', JSON.stringify(formData));
+    localStorage.setItem("formData", JSON.stringify(formData));
 
-    
     setTimeout(() => {
-      localStorage.removeItem('formData');
-      console.log('Form data cleared from localStorage.');
+      localStorage.removeItem("formData");
+      console.log("Form data cleared from localStorage.");
     }, 60000);
 
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
   return (
@@ -35,8 +34,7 @@ const MyForm = () => {
         <div className="form-wrapper">
           <h1>Поможем в выборе!</h1>
           <form onSubmit={handleSubmit}>
-            
-   <label htmlFor="name">Имя</label>
+            <label htmlFor="name">Имя</label>
             <input
               type="text"
               id="name"
@@ -69,12 +67,13 @@ const MyForm = () => {
             <input type="checkbox" name="agree" required />
             <label htmlFor="agree">Я принимаю условия обработки данных</label>
 
-
             <button type="submit">Отправить</button>
           </form>
         </div>
         <div className="form-info-wrapper">
-          <div className="form-info">{/* Можете добавить информацию о статусе отправки или ошибке здесь */}</div>
+          <div className="form-info">
+            {/* Можете добавить информацию о статусе отправки или ошибке здесь */}
+          </div>
         </div>
       </div>
     </div>
