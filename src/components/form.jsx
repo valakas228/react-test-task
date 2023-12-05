@@ -63,9 +63,11 @@ const MyForm = () => {
               onChange={handleChange}
               placeholder="Введите ваш телефон"
             />
+            <div>
 
-            <input type="checkbox" name="agree" required />
-            <label htmlFor="agree">Я принимаю условия обработки данных</label>
+              <input type="checkbox" name="agree" required />
+              <label htmlFor="agree">Я принимаю условия обработки данных</label>
+            </div>
 
             <button type="submit">Отправить</button>
           </form>
