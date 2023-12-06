@@ -5,7 +5,6 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import "./styles/styles.css";
 import "./styles/media.css";
-import "./js/script";
 
 function App() {
   return (
@@ -163,9 +162,9 @@ function App() {
           </div>
         </div>
       </main>
-      <div className="faq-background">
+      <>
         <Faq />
-      </div>
+      </>
       <footer id="footer">
         <Footer />
       </footer>

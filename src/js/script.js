@@ -1,47 +1,21 @@
-const moreBtns = document.querySelectorAll(".more-btn");
+document.addEventListener("DOMContentLoaded", function () {
+  const faqList = document.querySelector(".faq__list");
 
-moreBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const product = btn.parentNode;
-    const moreInfo = product.querySelector(".more-info");
+  if (faqList) {
+    const faqQuestions = faqList.querySelectorAll(".faq__question");
 
-    moreInfo.classList.toggle("show");
-    if (moreInfo.classList.contains("show")) {
-      btn.textContent = "Скрыть";
-    } else {
-      btn.textContent = "Подробнее";
-    }
-  });
+    faqQuestions.forEach((question) => {
+      question.addEventListener("click", () => {
+        question.classList.toggle("active");
+        const answer = question.nextElementSibling;
+        if (answer.style.maxHeight) {
+          answer.style.maxHeight = null;
+        } else {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+      });
+    });
+  } else {
+    console.error("Element with class '.faq__list' not found.");
+  }
 });
-
-const faqList = document.querySelector(".faq__list");
-const faqQuestions = faqList.querySelectorAll(".faq__question");
-
-faqQuestions.forEach((question) => {
-  question.addEventListener("click", () => {
-    question.classList.toggle("active");
-    const answer = question.nextElementSibling;
-    if (answer.style.maxHeight) {
-      answer.style.maxHeight = null;
-    } else {
-      answer.style.maxHeight = answer.scrollHeight + "px";
-    }
-  });
-});
-
-const animatedElements = document.querySelectorAll(".more-btn");
-
-function checkScroll() {
-  animatedElements.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top;
-    const elementBottom = element.getBoundingClientRect().bottom;
-
-    if (elementTop < window.innerHeight && elementBottom > 0) {
-      element.classList.add("animate");
-    } else {
-      element.classList.remove("animate");
-    }
-  });
-}
-
-window.addEventListener("scroll", checkScroll);
