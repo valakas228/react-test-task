@@ -64,7 +64,6 @@ const MyForm = () => {
               placeholder="Введите ваш телефон"
             />
             <div>
-
               <input type="checkbox" name="agree" required />
               <label htmlFor="agree">Я принимаю условия обработки данных</label>
             </div>
