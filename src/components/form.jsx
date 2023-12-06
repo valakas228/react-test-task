@@ -63,7 +63,7 @@ const MyForm = () => {
               onChange={handleChange}
               placeholder="Введите ваш телефон"
             />
-            <div>
+            <div id="checkbox">
               <input type="checkbox" name="agree" required />
               <label htmlFor="agree">Я принимаю условия обработки данных</label>
             </div>
@@ -72,9 +72,7 @@ const MyForm = () => {
           </form>
         </div>
         <div className="form-info-wrapper">
-          <div className="form-info">
-            {/* Можете добавить информацию о статусе отправки или ошибке здесь */}
-          </div>
+          <div className="form-info">{}</div>
         </div>
       </div>
     </div>
