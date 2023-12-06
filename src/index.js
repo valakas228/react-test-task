@@ -1,16 +1,7 @@
 import React from "react";
 import * as ReactDOMClient from "react-dom/client";
-import "./styles/styles.css";
-import "./styles/media.css";
-import Header from "./components/header";
-import Main from "./components/main";
-import Footer from "./components/footer";
-import "./js/script";
+import App from "./App";
 
-const main = ReactDOMClient.createRoot(document.getElementById("main"));
-const header = ReactDOMClient.createRoot(document.getElementById("header"));
-const footer = ReactDOMClient.createRoot(document.getElementById("footer"));
+const app = ReactDOMClient.createRoot(document.getElementById("root"));
 
-header.render(<Header />);
-main.render(<Main />);
-footer.render(<Footer />);
+app.render(<App />);
