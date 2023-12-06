@@ -694,11 +694,22 @@ button:active {
   padding: 20px;
 }
 
+form {
+  padding: 10px;
+}
+
 .form-wrapper {
   width: 100%;
   margin: auto;
   border-radius: 40px;
   background: white;
+}
+
+#checkbox {
+  display: flex;
+}
+#checkbox * {
+  padding: 5px;
 }
 
 .form-content {
@@ -782,5 +793,3 @@ button:active {
 .login form button[type="submit"]:hover {
   background-color: #45a049;
 }
-
-/*# sourceMappingURL=styles.css.map */
