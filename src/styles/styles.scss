@@ -53,6 +53,10 @@ body {
   letter-spacing: 0px;
 }
 
+.nav {
+  display: none;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -79,7 +83,7 @@ nav {
     }
   }
 
-  .mobile-menu {
+  #mobile-menu {
     display: none;
     cursor: pointer;
 

@@ -24,10 +24,28 @@ const Header = () => {
             <a href="login.php">Войти</a>
           </li>
         </ul>
-        <div className="mobile-menu">
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
+        <div id="mobile-menu">
+          <div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </div>
+          <nav className="nav">
+            <ul>
+              <li>
+                <a href="#">О нас</a>
+              </li>
+              <li>
+                <a href="#">Медиа</a>
+              </li>
+              <li>
+                <a href="#">Каталог</a>
+              </li>
+              <li>
+                <a href="#">Войти</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </nav>
       <div></div>

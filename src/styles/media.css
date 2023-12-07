@@ -1,5 +1,5 @@
 @media (max-width: 768px) {
-  .menu {
+  nav .menu {
     display: none;
   }
   .blocks2,
@@ -10,7 +10,11 @@
   .blocks {
     justify-content: center;
   }
+  nav #mobile-menu {
+    display: block;
+  }
 }
+
 @media (max-width: 1000px) {
   .info-column {
     flex-direction: column;
