@@ -5,21 +5,25 @@ const Faq = () => {
     const faqList = document.querySelector(".faq__list");
     const faqQuestions = faqList.querySelectorAll(".faq__question");
 
+    const handleQuestionClick = (question) => {
+      question.classList.toggle("active");
+      const answer = question.nextElementSibling;
+      if (answer.style.maxHeight) {
+        answer.style.maxHeight = null;
+      } else {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    };
+
     faqQuestions.forEach((question) => {
-      question.addEventListener("click", () => {
-        question.classList.toggle("active");
-        const answer = question.nextElementSibling;
-        if (answer.style.maxHeight) {
-          answer.style.maxHeight = null;
-        } else {
-          answer.style.maxHeight = answer.scrollHeight + "px";
-        }
-      });
+      question.addEventListener("click", () => handleQuestionClick(question));
     });
 
     return () => {
       faqQuestions.forEach((question) => {
-        question.removeEventListener("click");
+        question.removeEventListener("click", () =>
+          handleQuestionClick(question),
+        );
       });
     };
   }, []);
