@@ -193,9 +193,9 @@ button {
 
           .footer__list-item {
             margin-bottom: 10px;
+            color: white;
 
             a {
-              color: #333;
               text-decoration: none;
 
               &:hover {
@@ -375,6 +375,11 @@ label {
   }
 }
 
+.video-placeholder img {
+  max-height: 320px;
+  max-width: 470px;
+}
+
 .video-wrap {
   width: 100%;
 }
@@ -439,7 +444,7 @@ ul {
 
 .widget img {
   max-height: 320px;
-  max-width: 100%;
+  max-width: 470px;
   object-fit: cover;
   height: 100%;
 }
@@ -459,7 +464,7 @@ li {
 }
 
 a {
-  color: #2196f3;
+  color: grey;
   text-decoration: none;
 
   &:hover {
@@ -673,12 +678,13 @@ a {
 
 .news-column {
   width: 50%;
-  padding: 20px;
   line-height: 15px;
   margin: auto;
 
   img {
     object-fit: cover;
+    max-width: 470px;
+    max-height: 320px;
   }
 }
 
