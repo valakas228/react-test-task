@@ -2,6 +2,11 @@ import React from "react";
 import Image1 from "../imgs/1.jpg";
 import Image2 from "../imgs/2.png";
 import Image3 from "../imgs/3.jpeg";
+
+const LazyImage = ({ src, alt }) => {
+  return <img src={src} alt={alt} loading="lazy" />;
+};
+
 const Main = () => {
   return (
     <>
@@ -34,7 +39,7 @@ const Main = () => {
           </div>
           <div className="content-main-block-container2">
             <div className="video-placeholder">
-              <img src={Image1}></img>
+              <LazyImage src={Image1} alt="" />
             </div>
           </div>
         </div>
@@ -62,7 +67,7 @@ const Main = () => {
             </div>
             <div className="widget-wrapper">
               <div className="widget">
-                <img alt="" src={Image2} />
+                <LazyImage alt="" src={Image2} />
               </div>
             </div>
           </div>
@@ -82,13 +87,12 @@ const Main = () => {
             </div>
           </div>
           <div className="news-column">
-            <img
+            <LazyImage
               decoding="async"
               width="520"
               height="300"
               className="attachment-large"
               alt=""
-              loading="lazy"
               src={Image3}
             />
           </div>
@@ -101,7 +105,7 @@ const Main = () => {
           </h1>
           <div className="product-grid">
             <div className="product">
-              <img src="/imgs/1.jpg" alt="" />
+              <LazyImage src="/imgs/1.jpg" alt="" />
               <h3>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus,
                 sint.
@@ -113,7 +117,7 @@ const Main = () => {
               <button className="more-btn">Подробнее</button>
             </div>
             <div className="product">
-              <img src="" alt="" />
+              <LazyImage src="" alt="" />
               <h3>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus,
                 sint.
@@ -125,7 +129,7 @@ const Main = () => {
               <button className="more-btn">Подробнее</button>
             </div>
             <div className="product">
-              <img src="" alt="" />
+              <LazyImage src="" alt="" />
               <h3>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus,
                 sint.
