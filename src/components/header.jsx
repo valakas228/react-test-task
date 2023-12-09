@@ -1,7 +1,8 @@
 import React from "react";
 import logo from "../imgs/logo.jpg";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div>
       <nav>
@@ -10,46 +11,36 @@ const Header = () => {
             <img src={logo} width="50px" />
           </a>
         </div>
-        <ul className="menu">
-          <li>
-            <a href="index.html">О нас</a>
-          </li>
-          <li>
-            <a href="#">Медиа</a>
-          </li>
-          <li>
-            <a href="store.php">Каталог</a>
-          </li>
-          <li>
-            <a href="login.php">Войти</a>
-          </li>
-        </ul>
-        <div id="mobile-menu">
-          <div>
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
-          </div>
-          <nav className="nav">
-            <ul>
-              <li>
-                <a href="#">О нас</a>
-              </li>
-              <li>
-                <a href="#">Медиа</a>
-              </li>
-              <li>
-                <a href="#">Каталог</a>
-              </li>
-              <li>
-                <a href="#">Войти</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <Nav nav={props.data.nav} />
       </nav>
-      <div></div>
     </div>
+  );
+};
+
+const Nav = (props) => {
+  let data = props.nav;
+  const listItem = data.map((item) => (
+    <li key={item.link}>
+      {/* Используем to вместо href */}
+      <Link to={item.link}>{item.text}</Link>
+    </li>
+  ));
+
+  return (
+    <>
+      <ul className="menu">{listItem}</ul>
+      <div id="mobile-menu">
+        <div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+        <nav className="nav">
+          {/* Используем те же ссылки, определенные выше */}
+          <ul>{listItem}</ul>
+        </nav>
+      </div>
+    </>
   );
 };
 
