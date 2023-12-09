@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const navData = {
   nav: [
-    { link: "", text: "Главная" },
+    { link: "/", text: "Главная" },
     { link: "nav2", text: "Медиа" },
     { link: "nav3", text: "Каталог" },
     { link: "login", text: "Войти" },
@@ -28,8 +28,8 @@ function App() {
           </header>
           <Router>
             <Routes>
-              <Route path="/" element={<Main />} />
-              <Route path="/login" element={<Login />} />
+              <Route exact path="/" element={<Main />} />
+              <Route exact path="/login" element={<Login />} />
             </Routes>
           </Router>
           <div className="myform">
