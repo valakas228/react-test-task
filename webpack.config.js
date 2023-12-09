@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const path = require("path");
 
 module.exports = {
@@ -18,15 +19,12 @@ module.exports = {
           },
         },
       },
-      // Добавьте другие загрузчики для обработки различных типов файлов.
     ],
   },
   resolve: {
     extensions: [".js", ".jsx"],
     alias: {
       "@components": path.resolve(__dirname, "src/components"),
-      // Добавьте другие алиасы по необходимости.
     },
   },
-  // Другие настройки...
 };
