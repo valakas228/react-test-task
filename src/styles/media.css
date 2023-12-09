@@ -48,6 +48,12 @@
   .description {
     padding: 20px;
   }
+  .section {
+    flex-direction: column;
+  }
+  .description-wrapper {
+    width: 100%;
+  }
   .form-wrapper form {
     width: 50%;
   }
@@ -58,12 +64,27 @@
     padding: 20px;
     margin: auto;
   }
+
+  .widget {
+    padding: 40px;
+  }
+  .widget-wrapper {
+    width: 100%;
+  }
+  .widget img {
+    width: 100%;
+  }
   .content-main-block-container1 {
     width: 90%;
   }
   .video-placeholder {
     padding: 40px;
   }
+
+  .video-placeholder img {
+    width: 100%;
+  }
+
   .content-main-block-container2 {
     width: 100%;
   }
