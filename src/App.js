@@ -27,7 +27,6 @@ function App() {
 
         <main id="main">
           <div className="wrapper">
-            {/* Используем Routes вместо Switch */}
             <Routes>
               <Route path="/" element={<Main />} />
               <Route path="/login" element={<Login />} />
