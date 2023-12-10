@@ -21,7 +21,6 @@ const Nav = (props) => {
   let data = props.nav;
   const listItem = data.map((item) => (
     <li key={item.link}>
-      {/* Используем to вместо href */}
       <Link to={item.link}>{item.text}</Link>
     </li>
   ));
@@ -36,7 +35,6 @@ const Nav = (props) => {
           <div className="bar"></div>
         </div>
         <nav className="nav">
-          {/* Используем те же ссылки, определенные выше */}
           <ul>{listItem}</ul>
         </nav>
       </div>
