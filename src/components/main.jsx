@@ -2,6 +2,8 @@ import React from "react";
 import Image1 from "../imgs/1.jpg";
 import Image2 from "../imgs/2.png";
 import Image3 from "../imgs/3.jpeg";
+import MyForm from "./form";
+import Faq from "./faq";
 
 const LazyImage = ({ src, alt }) => {
   return <img src={src} alt={alt} loading="lazy" />;
@@ -153,6 +155,8 @@ const Main = () => {
           </div>
         </div>
       </div>
+      <MyForm />
+      <Faq />
     </>
   );
 };
