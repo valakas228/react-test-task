@@ -5,6 +5,7 @@ import Header from "./components/header";
 import Main from "./components/main";
 import Login from "./components/login";
 import Store from "./components/store";
+import Error from "./components/error";
 import "./styles/styles.css";
 import "./styles/media.css";
 
@@ -22,6 +23,7 @@ function App() {
     <Router>
       <div>
         <header id="header">
+          {" "}
           <Header data={navData} />
         </header>
 
@@ -31,6 +33,7 @@ function App() {
               <Route path="/" element={<Main />} />
               <Route path="/login" element={<Login />} />
               <Route path="/store" element={<Store />} />
+              <Route path="*" element={<Error />} />
             </Routes>
           </div>
         </main>
