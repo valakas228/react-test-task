@@ -18,7 +18,7 @@ const navData = {
   ],
 };
 
-function App() {
+const App = () => {
   return (
     <Router>
       <div>
@@ -44,6 +44,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default memo(App);
