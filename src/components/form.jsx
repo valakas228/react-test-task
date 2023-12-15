@@ -29,7 +29,7 @@ const MyForm = () => {
   };
 
   return (
-    <div className="form-background">
+    <div id="form" className="form-background">
       <div className="form-content">
         <div className="form-wrapper">
           <h1>Поможем в выборе!</h1>

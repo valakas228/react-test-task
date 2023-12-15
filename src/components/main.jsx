@@ -36,7 +36,9 @@ const Main = () => {
               </ul>
             </div>
             <div className="button-container">
-              <button className="btn">Оставить заявку</button>
+              <a href="#form">
+                <button>Оставить заявку</button>
+              </a>
             </div>
           </div>
           <div className="content-main-block-container2">
